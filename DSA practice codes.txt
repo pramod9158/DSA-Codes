@@ -1,0 +1,112 @@
+***************************removing consecutive duplicate ********************************
+public class Main
+{
+	public static void main(String[] args) {
+
+String s="abcdddddeffghhii";
+String b="";
+for (int k=1;k<8;k++)
+
+{
+for (int i=1;i<s.length();i++)
+{
+
+    if (s.charAt(i)==s.charAt(i-1))
+    {
+        for(int j=0;j<s.length();j++)
+        {
+        if(j!=i){
+        b=b+s.charAt(j);
+            }
+        }
+        
+        s=b;
+        b="";
+
+          break;
+
+    }
+  
+
+}
+
+
+
+
+}
+System.out.println(s);
+
+}
+
+}
+
+
+
+
+**********************************equivalent keypad numbers of a string******************************
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.HashMap;
+import java.io.*;
+import java.util.*;
+import java.util.Map.Entry;
+
+class HelloWorld {
+    public static void main(String[] args) {
+
+  String str[]= { "2",    "22",  "222", "3",   "33", "333",
+                "4",    "44",  "444", "5",   "55", "555",
+                "6",    "66",  "666", "7",   "77", "777",
+                "7777", "8",   "88",  "888", "9",  "99",
+                "999",  "9999" };
+
+
+
+        HashMap<String, String> map = new HashMap<>();
+
+                 int i;
+                 char ch;
+            for ( ch = 'A', i=0;  ch <= 'Z' && i<26; ++ch,i++) {
+
+    
+    // for (int i=0,j=65;i<26 && j<91;i++,j++){
+    
+                map.put(String.valueOf(ch), str[i]); 
+}
+// ?
+// System.out.println(Collections.singletonList(map)); // method 2
+    // System.out.println(map.values()); // method 2
+    // System.out.println(map.entrySet()); //? method 2
+    // System.out.println(map.keySet()); // method 2
+
+String a="ADFV";
+
+char[] arr=a.toCharArray();
+    // System.out.println(map.get("A")); /?/? method 2
+        // System.out.println(arr.length);
+
+String str1="";
+int l=arr.length;
+for(int k=0;k<l;k++)
+{
+        // System.out.println("hiidddddddddddddddddddddddddd      "+k);
+// System.out.println(l);
+    
+    for(Entry<String, String> entry: map.entrySet()) {
+
+         if ((entry.getKey()).equals(Character.toString(arr[k])))
+        {
+            str1=str1+entry.getValue();
+        }
+        
+
+    }
+
+}
+
+        System.out.println(str1);
+
+    }
+
+}
+**************************************************************************************************************************************************************

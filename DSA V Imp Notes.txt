@@ -1,0 +1,9 @@
+Declaring map: Map<Integer,String>=new HashMap<Integer,String>();
+converting a no into its ascci equivalent char: char(65) is A and char(97)=a
+"A" this in java stored as string and 'A' this will be stored as 65(ASCII value of A).
+
+
+String a="B";
+System.out.println(a.charAt(0)); --> ans=B
+System.out.println(a.charAt(0)-'A');  --> ans=1 i.e.:66-65
+System.out.print(a.charAt(0)-1);  --> ans=65 i.e.:66-1
